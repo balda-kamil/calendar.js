@@ -6,7 +6,7 @@ onDateSelect : function(day, month, year) {
     const dayText = ((day + 1) < 10) ? "0" + (day + 1) : day + 1;
     const monthsNames = ['styczeń', 'luty', 'marzec', 'kwiecień', 'maj', 'czerwiec', 'lipiec', 'sierpień', 'wrzesień', 'październik', 'listopad', 'grudzień'];
 
-    input.value = dayText + ' ' + monthsNames[month] + ' ' + year;
+    input.value = (dayText - 1) + ' ' + monthsNames[month -1] + ' ' + year;
   }
 });
 cal.init();
@@ -27,7 +27,7 @@ function Calendar(input, options) {
       onDateSelect : function(day, month, year) {
           const monthText = ((month + 1) < 10) ? "0" + (month + 1) : month + 1;
           const dayText =  (day < 10) ? "0" + day : day;
-          this.input.value = dayText + '-' + monthText + '-' + this.year;
+          this.input.value = dayText + '-' + (monthText - 1) + '-' + this.year;
       }.bind(this)
   }
   this.options = Object.assign({}, defaultOptions, options);
