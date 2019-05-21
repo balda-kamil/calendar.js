@@ -1,0 +1,82 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "param1": "value1",
+      "param2": "value2",
+      "id": 2
+    },
+    {
+      "commentID": "22",
+      "title": "jak uzywac curla",
+      "id": "3",
+      "name": "Kamil testuje"
+    },
+    {
+      "commentID": "12123",
+      "title": "jak uzfffffac curla",
+      "id": "4",
+      "name": "K222mil testuje"
+    },
+    {
+      "commentID": "12123",
+      "title": "jak uzfffffac curla",
+      "name": "K222mil testuje",
+      "id": "Qzb7gil"
+    },
+    {
+      "commentID": "12123",
+      "title": "jak uzfffffac curla",
+      "name": "K222mil testuje",
+      "id": "Y4ntwfG"
+    },
+    {
+      "commentID": "12123",
+      "title": "jak uzfffffac curla",
+      "name": "K222mil testuje",
+      "id": "45An7_d"
+    },
+    {
+      "commentID": "12123",
+      "title": "jak uzfffffac curla",
+      "name": "K222mil testuje",
+      "id": "nxplvKF"
+    },
+    {
+      "commentID": "12123",
+      "title": "jak uzfffffac curla",
+      "name": "K222mil testuje",
+      "id": "42_-iO3"
+    },
+    {
+      "commentID": "12123",
+      "title": "jak uzfffffac curla",
+      "name": "K222mil testuje",
+      "id": "SXXYn4k"
+    },
+    {
+      "commentID": "12123",
+      "title": "jak uzfffffac curla",
+      "name": "K222mil testuje",
+      "id": "WABA2QD"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "test33": "",
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
