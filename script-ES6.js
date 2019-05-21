@@ -44,9 +44,19 @@ class BrickRed extends Brick {
 
 class BrickGreen extends Brick {
   constructor(){
-    super(graphic, live);
+    super();
     this.graphic = "green.png";
     this.live = 20;
+  }
+}
+
+class BrickAnim extends Brick {
+  constructor(speed){
+    super()
+    this.speed = speed;
+  }
+  moveHorizontal(){
+    console.log('poruszam się z szybkością ' + this.speed)
   }
 }
 
