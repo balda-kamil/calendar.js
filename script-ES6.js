@@ -21,7 +21,7 @@ class Calendar {
   this.options = Object.assign({}, defaultOptions, options);
   }
   //metoda tworząca przyciski prev-next
-  createButtons = function () {
+  createButtons() {
     const buttonPrev = document.createElement('button');
     buttonPrev.innerText = '<';
     buttonPrev.type = "button";
@@ -54,13 +54,13 @@ class Calendar {
   };
 
  //metoda wypisująca nazwę miesiąca i roku
-  createDateText = function () {
+  createDateText() {
     const monthNames = ['styczeń', 'luty', 'marzec', 'kwiecień', 'maj', 'czerwiec', 'lipiec', 'sierpień', 'wrzesień', 'październik', 'listopad', 'grudzień'];
     this.divDateText.innerHTML = monthNames[this.month] + ' ' + this.year;
   };
   
    //metoda tworząca tabele z kalendarzem
-   createCalendarTable = function () {
+   createCalendarTable() {
     this.divTable.innerHTML = '';
 
     //tworzymy nazwy dni
@@ -128,7 +128,7 @@ class Calendar {
 };
 
 //podpinamy klik pod dni w tabeli kalendarza
-bindTableDaysEvent = function() {
+bindTableDaysEvent() {
   this.divTable.addEventListener('click', function(e) {
       if (e.target.tagName.toLowerCase() === 'td' && e.target.classList.contains('day')) {
           const month2 = ((this.month + 1) < 10) ? "0" + (this.month + 1) : this.month + 1;
@@ -141,22 +141,22 @@ bindTableDaysEvent = function() {
   }.bind(this));
 }
   //metoda ukrywa/pokazuje kalendarz
-  toggleShow = function() {
+  toggleShow() {
     this.divCnt.classList.toggle('calendar-show');
 }
 
   //metoda pokazuje kalendarz
-  show = function() {
+  show() {
       this.divCnt.classList.add('calendar-show');
   }
 
   //metoda ukrywa kalendarz
-  hide = function() {
+  hide() {
       this.divCnt.classList.remove('calendar-show');
   }
 
   //metoda inicjująca obiekt
-  init = function () {
+  init() {
       //tworzymy div z całą zawartością
       this.divCnt = document.createElement('div');
       this.divCnt.classList.add('calendar');
@@ -210,13 +210,12 @@ bindTableDaysEvent = function() {
           this.hide();
       }.bind(this));
   };
-
 }
 
 const input = document.querySelector('.input-date');
 
 const cal = new Calendar(input, {
-    closeOnSelect : true,
+    closeOnSelect : false,
     onDateSelect : function(day, month, year) {
     
         const dayText = ((day + 1) < 10) ? "0" + (day + 1) : day + 1;
@@ -225,6 +224,3 @@ const cal = new Calendar(input, {
         input.value = (dayText - 1) + ' ' + monthsNames[month -1] + ' ' + year;
       }
     });
-
-
-cal.init();
